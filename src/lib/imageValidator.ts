@@ -15,7 +15,7 @@ const CURATED: Array<{
   themes: string[];
 }> = [
   {
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Into_the_Jaws_of_Death_23-0455M_edit.jpg/1024px-Into_the_Jaws_of_Death_23-0455M_edit.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Into_the_Jaws_of_Death_23-0455M_edit.jpg",
     credit:
       "Robert F. Sargent, U.S. Coast Guard — 'Into the Jaws of Death', Omaha Beach, June 6 1944 (public domain, NARA)",
     themes: [
@@ -38,7 +38,7 @@ const CURATED: Array<{
     ],
   },
   {
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Raising_the_Flag_on_Iwo_Jima%2C_larger_-_edit1.jpg/1024px-Raising_the_Flag_on_Iwo_Jima%2C_larger_-_edit1.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Raising_the_Flag_on_Iwo_Jima%2C_larger_-_edit1.jpg",
     credit:
       "Joe Rosenthal, Associated Press — 'Raising the Flag on Iwo Jima', February 23 1945 (public domain)",
     themes: [
@@ -52,7 +52,7 @@ const CURATED: Array<{
     ],
   },
   {
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/NormandySupply_edit.jpg/1024px-NormandySupply_edit.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/6/66/NormandySupply_edit.jpg",
     credit:
       "U.S. Coast Guard — Operation Overlord supply landings, Normandy June 1944 (public domain, NARA)",
     themes: [
