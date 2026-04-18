@@ -1,7 +1,10 @@
 # Lantern
 Doc: https://docs.google.com/document/d/1eGMtJliPdv-jnidLdj7FCbWfi9-zogdM00nmMzmgYfc/edit?usp=sharing
+
 Live Demo: https://video.georgez.xyz/
+
 Video Demo: https://youtu.be/jIofF2PUrhg
+
 **Turning vanishing voices into letters for the future.**
 
 Hackathon submission — Claude Hackathon 2026, theme _"Creative Flourishing"_ (inspired by Dario Amodei's _Machines of Loving Grace_).
