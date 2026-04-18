@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lantern
 
-## Getting Started
+**Turning vanishing voices into letters for the future.**
 
-First, run the development server:
+Hackathon submission — Claude Hackathon 2026, theme _"Creative Flourishing"_ (inspired by Dario Amodei's _Machines of Loving Grace_).
+
+## What it does
+
+Paste a YouTube URL of a WW2 veteran's testimony. Lantern runs a 4-agent Claude pipeline that:
+
+1. **Fetches** the transcript
+2. **Excavates** structured story fragments (people, places, battles, emotions)
+3. **Verifies** facts via web search, pulls period imagery
+4. **Builds** a memory graph of entities
+5. **Narrates** a historically-grounded, illustrated letter — written in the veteran's own voice, addressed to their future descendant
+
+The 16 million Americans who served in WW2 are down to ~100,000. ~300 die every day. Their stories are on YouTube, in oral histories, in family archives — but they're not _reachable_ by the people who should hear them. Lantern turns a voice into an heirloom.
+
+## Why it's more than a chatbot
+
+- **4 coordinated Claude agents** (Story-Excavator, Fact-Weaver, Memory-Graph, Narrator)
+- **Tool use**: hosted web search, structured fragment extraction, entity graph upserts
+- **Extended thinking** on the Narrator — judges see the model _reason about the veteran's voice_
+- **Parallel agent execution** (Fact-Weaver + Memory-Graph run concurrently)
+
+## Stack
+
+- Next.js 16 (App Router) + React 19 + Tailwind 4
+- `@anthropic-ai/sdk` (Sonnet 4.6 + Haiku 4.5)
+- `youtube-transcript` for caption ingestion
+- Server-Sent Events for live agent trace
+- Deployed on Vercel
+
+## Team & ways of working
+
+- **Frontend builder** → see [`docs/03-FRONTEND.md`](./docs/03-FRONTEND.md)
+- **Backend builder** → see [`docs/04-BACKEND.md`](./docs/04-BACKEND.md)
+- **Shared contract (read first)** → [`docs/02-API-CONTRACT.md`](./docs/02-API-CONTRACT.md)
+
+## Doc index
+
+| #   | Doc                                         | Read if…                              |
+| --- | ------------------------------------------- | ------------------------------------- |
+| 00  | [Project Brief](./docs/00-BRIEF.md)         | you want the pitch + rubric strategy  |
+| 01  | [Architecture](./docs/01-ARCHITECTURE.md)   | you want the system diagram           |
+| 02  | [API Contract](./docs/02-API-CONTRACT.md)   | **both of you — this is the handoff** |
+| 03  | [Frontend Plan](./docs/03-FRONTEND.md)      | you're building the UI                |
+| 04  | [Backend Plan](./docs/04-BACKEND.md)        | you're building the agents            |
+| 05  | [Agent Prompts](./docs/05-AGENT-PROMPTS.md) | you're writing the Claude prompts     |
+| 06  | [Demo Clips](./docs/06-DEMO-CLIPS.md)       | you're picking the YouTube URLs       |
+| 07  | [Demo Script](./docs/07-DEMO-SCRIPT.md)     | you're the one presenting             |
+| 08  | [Devpost Template](./docs/08-DEVPOST.md)    | you're submitting                     |
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+echo "ANTHROPIC_API_KEY=sk-ant-..." > .env.local
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo time budget (90 min total)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Minutes | Task                                        | Owner |
+| ------- | ------------------------------------------- | ----- |
+| 0–10    | Read docs 00–02 together, agree on contract | Both  |
+| 10–65   | Build in parallel against the contract      | Split |
+| 65–75   | Integrate, fix edges                        | Both  |
+| 75–85   | Deploy + record 60-sec demo                 | Both  |
+| 85–90   | Devpost submission                          | One   |
