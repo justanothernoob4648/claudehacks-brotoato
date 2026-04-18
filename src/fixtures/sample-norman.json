@@ -1,0 +1,224 @@
+[
+  {
+    "type": "status",
+    "stage": "fetching_transcript",
+    "message": "Fetching captions…"
+  },
+  {
+    "type": "transcript",
+    "text": "My name is Norman Duncan. I was nineteen when I jumped into Normandy. I was with the 101st Airborne. We came in just before dawn on the sixth of June. It rained all night in the plane. I remember the green light, and then I remember the wind. Most of the boys I trained with didn't make it past the first week. My mother wrote me every day. I still have some of the letters. I don't talk about the war much. I never have. But I think about Sergeant Williams every single day. He was from Ohio. He had three kids.",
+    "durationSec": 412,
+    "title": "Norman Duncan · D-Day · 101st Airborne",
+    "speaker": "Norman Duncan"
+  },
+  { "type": "agent_start", "agent": "excavator" },
+  {
+    "type": "fragment",
+    "fragment": {
+      "id": "f1",
+      "kind": "person",
+      "text": "Norman Duncan, age 19"
+    }
+  },
+  {
+    "type": "fragment",
+    "fragment": { "id": "f2", "kind": "unit", "text": "101st Airborne" }
+  },
+  {
+    "type": "fragment",
+    "fragment": {
+      "id": "f3",
+      "kind": "date",
+      "text": "June 6, 1944, just before dawn"
+    }
+  },
+  {
+    "type": "fragment",
+    "fragment": { "id": "f4", "kind": "place", "text": "Normandy" }
+  },
+  {
+    "type": "fragment",
+    "fragment": {
+      "id": "f5",
+      "kind": "memory",
+      "text": "It rained all night in the plane."
+    }
+  },
+  {
+    "type": "fragment",
+    "fragment": {
+      "id": "f6",
+      "kind": "memory",
+      "text": "The green light, then the wind."
+    }
+  },
+  {
+    "type": "fragment",
+    "fragment": {
+      "id": "f7",
+      "kind": "emotion",
+      "text": "Most of the boys I trained with didn't make it past the first week."
+    }
+  },
+  {
+    "type": "fragment",
+    "fragment": {
+      "id": "f8",
+      "kind": "person",
+      "text": "Sergeant Williams, from Ohio, three kids"
+    }
+  },
+  {
+    "type": "fragment",
+    "fragment": {
+      "id": "f9",
+      "kind": "memory",
+      "text": "My mother wrote me every day. I still have some of the letters."
+    }
+  },
+  {
+    "type": "fragment",
+    "fragment": {
+      "id": "f10",
+      "kind": "quote",
+      "text": "I don't talk about the war much. I never have."
+    }
+  },
+  { "type": "agent_end", "agent": "excavator" },
+  {
+    "type": "status",
+    "stage": "fact_checking",
+    "message": "Verifying and graphing in parallel…"
+  },
+  { "type": "agent_start", "agent": "fact_weaver" },
+  { "type": "agent_start", "agent": "memory_graph" },
+  {
+    "type": "fact",
+    "fact": {
+      "id": "fact1",
+      "claim": "The 101st Airborne Division jumped into Normandy before dawn on June 6, 1944.",
+      "verdict": "verified",
+      "sources": [
+        {
+          "title": "U.S. Army Center of Military History — 101st Airborne in Normandy",
+          "url": "https://history.army.mil/"
+        },
+        {
+          "title": "National WWII Museum — D-Day Airborne Operations",
+          "url": "https://www.nationalww2museum.org/"
+        }
+      ],
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Paratroopers_just_before_they_took_off_for_the_initial_assault_of_D-Day.jpg/800px-Paratroopers_just_before_they_took_off_for_the_initial_assault_of_D-Day.jpg",
+      "imageCredit": "U.S. Army, public domain (NARA)"
+    }
+  },
+  {
+    "type": "entity",
+    "entity": {
+      "id": "norman-duncan",
+      "kind": "person",
+      "name": "Norman Duncan"
+    }
+  },
+  {
+    "type": "entity",
+    "entity": {
+      "id": "101st-airborne",
+      "kind": "unit",
+      "name": "101st Airborne Division"
+    }
+  },
+  {
+    "type": "entity",
+    "entity": { "id": "normandy", "kind": "place", "name": "Normandy, France" }
+  },
+  {
+    "type": "entity",
+    "entity": {
+      "id": "d-day",
+      "kind": "event",
+      "name": "D-Day / Operation Overlord"
+    }
+  },
+  {
+    "type": "entity",
+    "entity": {
+      "id": "sgt-williams",
+      "kind": "person",
+      "name": "Sergeant Williams",
+      "description": "From Ohio, three children"
+    }
+  },
+  {
+    "type": "fact",
+    "fact": {
+      "id": "fact2",
+      "claim": "Paratroopers were given a green light signal to jump.",
+      "verdict": "verified",
+      "sources": [
+        {
+          "title": "C-47 Jump Procedures, WWII",
+          "url": "https://www.nationalww2museum.org/"
+        }
+      ]
+    }
+  },
+  { "type": "agent_end", "agent": "fact_weaver" },
+  { "type": "agent_end", "agent": "memory_graph" },
+  {
+    "type": "status",
+    "stage": "narrating",
+    "message": "Composing the letter…"
+  },
+  { "type": "agent_start", "agent": "narrator" },
+  {
+    "type": "thinking",
+    "agent": "narrator",
+    "text": "He uses plain nouns — 'the green light, then the wind.' I should not embellish that. Keep his rhythm: short sentences, no adjectives."
+  },
+  {
+    "type": "thinking",
+    "agent": "narrator",
+    "text": "The emotional center is Sergeant Williams, not himself. He deflects to other people. Honor that."
+  },
+  { "type": "letter_chunk", "text": "Dear child I will never meet — " },
+  {
+    "type": "letter_chunk",
+    "text": "I was nineteen when I jumped into France. "
+  },
+  { "type": "letter_chunk", "text": "It rained all night in the plane…" },
+  {
+    "type": "letter_complete",
+    "letter": {
+      "salutation": "Dear child I will never meet,",
+      "sections": [
+        {
+          "heading": "The morning it rained on us",
+          "body": "I was nineteen when I jumped into France. It rained all night in the plane. I remember the green light, and then I remember the wind. That is almost all I remember of the first hour. I tell you this not because it is brave — it isn't — but because you should know that most of what we did was wait, and be cold, and then do the thing we had practiced.[^1]",
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Paratroopers_just_before_they_took_off_for_the_initial_assault_of_D-Day.jpg/800px-Paratroopers_just_before_they_took_off_for_the_initial_assault_of_D-Day.jpg",
+          "imageCredit": "U.S. Army, public domain (NARA)",
+          "footnotes": [
+            {
+              "marker": "1",
+              "text": "101st Airborne, Operation Overlord, June 6, 1944 — verified via U.S. Army Center of Military History.",
+              "url": "https://history.army.mil/"
+            }
+          ]
+        },
+        {
+          "heading": "Sergeant Williams",
+          "body": "There was a man named Williams from Ohio. He had three children. Most of the boys I trained with didn't make it past the first week, and he was one of them. I think about him every single day. I want you to know his name, because he was a real person, and because I don't think anyone else still says it."
+        },
+        {
+          "heading": "What my mother did",
+          "body": "My mother wrote me every day. Every day. I still have some of the letters. You come from her, in a line that goes mother to son to son to daughter to you. The war was long ago for you. It is still close to me. Both things are true."
+        }
+      ],
+      "signoff": "With love, across the years —\nNorman",
+      "speaker": "Norman Duncan",
+      "generatedAt": "2026-04-18T15:00:00.000Z"
+    }
+  },
+  { "type": "agent_end", "agent": "narrator" },
+  { "type": "status", "stage": "complete", "message": "Done." }
+]
